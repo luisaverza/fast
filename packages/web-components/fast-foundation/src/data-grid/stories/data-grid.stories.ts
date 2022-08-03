@@ -12,6 +12,7 @@ const storyTemplate = html<StoryArgs<FASTDataGrid>>`
         grid-template-columns="${x => x.gridTemplateColumns}"
         page-size="${x => x.pageSize}"
         click-select="${x => x.clickSelect}"
+        disable-click-select="${x => x.disableClickSelect}"
         selection-mode="${x => x.selectionMode}"
         unselectable-row-indexes="${x => x.unselectableRowIndexes}"
         initial-row-selection="${x => x.initialRowSelection}"
@@ -66,7 +67,7 @@ export default {
             options: ["none", "single-row", "multi-row"],
             control: { type: "select" },
         },
-        clickSelect: {
+        disableClickSelect: {
             control: { type: "boolean" },
         },
         unselectableRowIndexes: {
